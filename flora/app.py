@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from flask import Flask
+from flask_cors import CORS
 from werkzeug.utils import import_string
 
 blueprints = [
@@ -11,6 +12,7 @@ blueprints = [
 
 def create_app(config=None):
     app = Flask(__name__)
+    CORS(app, supports_credentials=True)
     app.config.from_object('flora.config')
     app.config.from_object(config)
 
