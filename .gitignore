@@ -1,3 +1,5 @@
 .idea*
 *.xml
 __pycache__/
+log/
+dist/log/

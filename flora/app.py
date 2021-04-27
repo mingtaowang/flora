@@ -2,21 +2,16 @@
 
 from flask import Flask
 from flask_cors import CORS
-from werkzeug.utils import import_string
 
-blueprints = [
-    'flora.views.home:bp',
-    'flora.views.reqs.reqs:bp',
-]
+from flora.views.home import bp as bp_home
+from flora.views.reqs.reqs import bp as bp_reqs
 
 
-def create_app(config=None):
+def create_app():
     app = Flask(__name__)
     CORS(app, supports_credentials=True)
-    app.config.from_object('flora.config')
-    app.config.from_object(config)
+    app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 
-    for blueprint in blueprints:
-        blueprint = import_string(blueprint)
-        app.register_blueprint(blueprint)
+    app.register_blueprint(bp_home)
+    app.register_blueprint(bp_reqs)
     return app
