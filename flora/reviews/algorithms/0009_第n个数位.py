@@ -42,11 +42,13 @@ class Solution:
             count *= 10
             start *= 10
 
-        start += (n)
+        start += (n - 1) // len
+        index = (n - 1) % len
+        return int(str(start)[index])
 
 
 if __name__ == '__main__':
     s = Solution()
-    origin = '08'
+    origin = 11
     res = s.findNthDigit(origin)
     print(res)
