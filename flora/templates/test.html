@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cavs</title>
+</head>
+<body>
+hello world
+<div style="width: 80%; height: 900px; padding: 10px auto;">
+    <canvas id="canvas" width="60%" height="900px" style="background-color:#ffffff;"></canvas>
+</div>
+</body>
+<script>
+    var tempImg = new Image();
+
+    tempImg.src = "strawberry.jpeg";//准备好的图片
+
+    tempImg.onload = function(){
+
+        ctx.drawImage(tempImg,0,0);
+
+        ctx.font="35px microsoft yahei";//设置画笔的字体大小和格式
+
+        ctx.fillStyle = "rgba(255,255,255,1)";//设置字体的颜色
+
+        ctx.fillText("测试",10,50);//将文字信息画在画布上，按照x,y的坐标，在手机上坐标不是很准确
+
+        var d = canvas.toDataURL("png");//将画布当前状态生成对应的base64串；
+
+        ctx.clearRect(0,0,canvas.width,canvas.height);//清除画布
+    }
+</script>
+</html>

@@ -7,6 +7,7 @@ from werkzeug.utils import import_string
 blueprints = [
     'flora.views.home:bp',
     'flora.views.reqs.reqs:bp',
+    'flora.views.api.audit:bp',
 ]
 
 
