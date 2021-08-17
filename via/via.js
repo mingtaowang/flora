@@ -1,3 +1,28 @@
+
+/*
+
+  This source code is organized in the following groups:
+
+  - Data structure for annotations
+  - Initialization routine
+  - Handlers for top navigation bar
+  - Local file uploaders
+  - Data Importer
+  - Data Exporter
+  - Maintainers of user interface
+  - Image click handlers
+  - Canvas update routines
+  - Region collision routines
+  - Shortcut key handlers
+  - Persistence of annotation data in browser cache (i.e. localStorage)
+  - Handlers for attributes input panel (spreadsheet like user input panel)
+
+  See [Source code documentation](https://gitlab.com/vgg/via/blob/develop/CodeDoc.md)
+  and [Contributing Guidelines](https://gitlab.com/vgg/via/blob/develop/CONTRIBUTING.md)
+  for more details.
+
+*/
+
 var VIA_VERSION      = '1.0.3';
 var VIA_NAME         = 'VGG Image Annotator';
 var VIA_SHORT_NAME   = 'VIA';
