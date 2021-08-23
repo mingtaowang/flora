@@ -49,7 +49,7 @@
         $.ajax({
             type: "POST",
             contentType: "application/json;charset=UTF-8",
-            url: "audit",
+            url: "http://127.0.0.1:9000/audit/",
             data: JSON.stringify({"notes": notes, "defect": defect, "x": s_x, "y": s_y, "w": s_w, "h": s_h}),
             dataType: "json",
             success:function(response) {
